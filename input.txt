@@ -1,9 +1,0 @@
-First Nam#e: Yeho!natan
-Second N$ame: Cohen
-Fingerp#rint: abc123456
-Posit!ion: Boss
-
-First Na?me: Da#n
-Second Na!me: Levi
-Fing#erprint: xyz987654
-Positio?n: Support_Right
