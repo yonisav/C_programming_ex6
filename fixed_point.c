@@ -1,8 +1,15 @@
 #include "fixed_point.h"
 #include <stdio.h>
+#include <stdint.h>
 
 void print_fixed(int16_t raw, int16_t q) {
-    // TODO: Print up to 6 decimal places (with truncation)
+
+    // Print up to 6 decimal places (with truncation)
+
+    double val = (double)raw / (1 << q); // val = raw / q^2
+    double truncated = (int64_t)(val * 1000000) / 1000000.0;
+
+    printf("%.6f", truncated);
 }
 
 int16_t add_fixed(int16_t a, int16_t b) {
