@@ -13,18 +13,20 @@ void print_fixed(int16_t raw, int16_t q) {
 }
 
 int16_t add_fixed(int16_t a, int16_t b) {
-    
-    // TODO: Implement addition
+    // Implement addition
+    return a + b;
 }
 
 int16_t subtract_fixed(int16_t a, int16_t b) {
-    // TODO: Implement subtraction
+    // TImplement subtraction
+    return a - b;
 }
 
 int16_t multiply_fixed(int16_t a, int16_t b, int16_t q) {
-    // TODO: Implement fixed-point multiply:
-       //- Use a wider type for intermediate multiplication (e.g., int32_t or int64_t).
-   
+    //Implement fixed-point multiply:
+    //- Use a wider type for intermediate multiplication (e.g., int32_t or int64_t).
+    int64_t temp = (int64_t)a * b;
+    return(int16_t)(temp >> q);
 }
 
 void eval_poly_ax2_minus_bx_plus_c_fixed(int16_t x, int16_t a, int16_t b, int16_t c, int16_t q) {
