@@ -6,6 +6,7 @@ void print_fixed(int16_t raw, int16_t q) {
 }
 
 int16_t add_fixed(int16_t a, int16_t b) {
+    
     // TODO: Implement addition
 }
 
