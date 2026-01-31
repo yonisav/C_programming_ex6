@@ -6,7 +6,7 @@
 typedef struct entrant {
 	char* firstName;
 	char* secondName;
-	char fingerPrint[10];
+	char fingetPrint[10];
 	enum position { Boss, Right_Hand, Left_Hand, Support_Right, Support_Left } role;
 } entrant;
 
