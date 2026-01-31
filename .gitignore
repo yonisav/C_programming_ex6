@@ -1,3 +1,8 @@
 .vscode
-input.txt
-output.txt
+*.exe
+*.o
+*.out
+*.txt
+ex1
+ex2
+ex3
