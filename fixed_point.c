@@ -30,9 +30,15 @@ int16_t multiply_fixed(int16_t a, int16_t b, int16_t q) {
 }
 
 void eval_poly_ax2_minus_bx_plus_c_fixed(int16_t x, int16_t a, int16_t b, int16_t c, int16_t q) {
-    /* TODO:
+    /* 
        Evaluate: y = a*x^2 - b*x + c
     */
+
+    int16_t x_sq = multiply_fixed(x, x, q); // x^2
+    int16_t term1 = multiply_fixed(a, x_sq, q); // a*x^2
+    int16_t term2 = multiply_fixed(b, x, q); // b*x
+    int16_t res_sub = subtract_fixed(term1, term2); // a*x^2 - b*x
+    int16_t y = add_fixed(res_sub, c); //  a*x^2 - b*x + c
 
     printf("the polynomial output for a=");
     print_fixed(a, q);
@@ -41,7 +47,9 @@ void eval_poly_ax2_minus_bx_plus_c_fixed(int16_t x, int16_t a, int16_t b, int16_
     printf(", c=");
     print_fixed(c, q);
     printf(" is ");
-    /* TODO: print y once computed */
+    /* print y once computed */
     /* print_fixed(y, q); */
+    print_fixed(y, q);
+   // printf("\n");
 
 }
