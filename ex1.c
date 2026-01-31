@@ -6,7 +6,7 @@
 typedef struct entrant {
 	char* firstName;
 	char* secondName;
-	char fingetPrint[10];
+	char fingerPrint[10];
 	enum position { Boss, Right_Hand, Left_Hand, Support_Right, Support_Left } role;
 } entrant;
 
@@ -19,7 +19,7 @@ int n_ent;
 //clean up a line by removing "corrupted" characters
 char* clean_line(const char* line) {
 	size_t len = strlen(line);
-	char cleaned[1025] = {0};
+	static char cleaned[1025] = {0};
 	size_t j = 0;
 	for (size_t i = 0; i < len; i++) {
 		if (line[i] == '#' || line[i] == '?' || line[i] == '!'
@@ -34,7 +34,7 @@ char* clean_line(const char* line) {
 			cleaned[j - 1] = '\0';
 		}
 	}
-	return &cleaned;
+	return cleaned;
 }
 
 // Shift the line to the left by indx positions
